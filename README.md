@@ -1,27 +1,66 @@
-## ⚙️ Technology Stack
+# HAVDEF - Hindi Audio-Visual Deepfake Defense
 
-### 🔊 AI & Deepfake Detection
-- **Wav2Vec2** (Hugging Face): Speech representation learning and voice anomaly detection.
-- **Whisper** (OpenAI): Multilingual speech recognition and transcription.
-- **Custom CNN/RNN Architectures**: Temporal and spectral audio analysis.
-- **Phoneme-Level Analysis**: Detection of inconsistencies in Hinglish phonetics.
+**HAVDEF** is a real-time deepfake voice detection system designed to combat the growing threat of AI-generated fraud calls in India. Focused on **Hinglish (Hindi + English)** conversations, HAVDEF uses machine learning techniques to detect synthetic voices and alert users during suspicious phone calls.
 
-### 🧪 Machine Learning & Frameworks
-- **PyTorch / TensorFlow**: Model training, fine-tuning, and inference.
-- **Hugging Face Transformers**: Pre-trained models and pipeline integration.
-- **Scikit-learn / NumPy / Pandas**: Data preprocessing and evaluation support.
+## 🌐 Project Goal
 
-### 📱 Mobile Application (Optional)
-- **Android SDK (Java/Kotlin)**: Native Android app development.
-- **Flutter (Dart)** *(Optional)*: Cross-platform support for mobile deployment.
+To safeguard users—especially in India—from voice-based impersonation scams by detecting and flagging AI-generated speech in real-time.
 
-### 🖥️ Backend & Integration
-- **Flask / FastAPI**: REST API for model inference.
-- **Socket.IO / WebRTC**: Real-time communication for live audio processing.
-- **SQLite / Firebase / PostgreSQL**: Database solutions for logs and user data.
+---
 
-### 🛠️ Tooling & Utilities
-- **Librosa / Soundfile / OpenCV**: Audio processing, augmentation, and analysis.
-- **Docker**: Containerization for deployment and scalability.
-- **Git / GitHub**: Version control and collaboration.
-- **Jupyter Notebooks**: For model prototyping and documentation.
+## 🧠 Features
+
+- 🎙️ Real-time voice input analysis
+- 🧾 Hinglish (Hindi + English) language support
+- 🤖 Deepfake voice detection using trained AI models
+- 📲 Mobile-friendly app interface (planned)
+- 🔔 Instant alert system on potential fraud calls
+
+---
+
+## 🔧 Tech Stack
+
+### 🧪 AI & Machine Learning
+- **Python**
+- **PyTorch / TensorFlow** – Model training and inference
+- **Librosa** – Audio preprocessing and feature extraction
+- **Scikit-learn** – Additional ML utilities
+- **pyaudio / sounddevice** – Real-time audio capture
+
+### 📊 NLP & Language Support
+- **IndicNLP** or **iNLTK** – For Hindi and Hinglish text processing
+- **TextBlob / SpaCy** – Sentiment or linguistic cues (if used)
+
+### 📱 Mobile App (Planned)
+- **Flutter** or **React Native** – Cross-platform mobile development
+- **Firebase** – Backend and notifications (optional)
+
+### 🧪 Deepfake Detection Techniques
+- Voice embedding comparison (e.g., **x-vectors**, **ECAPA-TDNN**)
+- Spectrogram analysis using CNNs or RNNs
+- Classifier based on audio authenticity scores
+
+---
+
+## 🛠️ How It Works (High-Level)
+
+1. Capture incoming voice stream during a phone call
+2. Extract acoustic features (MFCCs, pitch, spectral roll-off, etc.)
+3. Feed features into a trained deepfake classifier model
+4. Compute a confidence score on voice authenticity
+5. Alert the user if the voice is suspected to be AI-generated
+
+---
+
+## 🚀 Getting Started (Dev Setup)
+
+```bash
+git clone https://github.com/your-username/havdef.git
+cd havdef
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run demo or test audio detection
+python detect_fake_audio.py --input sample_audio.wav
+
