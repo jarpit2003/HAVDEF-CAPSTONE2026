@@ -2,11 +2,13 @@
 
 **HAVDEF** is a real-time deepfake voice detection system designed to combat the growing threat of AI-generated fraud calls in India. Focused on **Hinglish (Hindi + English)** conversations, HAVDEF uses machine learning techniques to detect synthetic voices and alert users during suspicious phone calls.
 
+DEPLOYED LINK-https://prodready-path.lovable.app
+
 ## 🌐 Project Goal
 
 To safeguard users—especially in India—from voice-based impersonation scams by detecting and flagging AI-generated speech in real-time.
 
----
+---v
 
 ## 🧠 Features
 
